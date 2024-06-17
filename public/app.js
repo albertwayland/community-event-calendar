@@ -1,16 +1,18 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, query, where, Timestamp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyAs81-zOOKDdMKT9zl3jhwHciLohDEHX1Y",
     authDomain: "hackathon-project-b2b8f.firebaseapp.com",
     projectId: "hackathon-project-b2b8f",
-    storageBucket: "hackathon-project-b2b8f",
+    storageBucket: "hackathon-project-b2b8f.appspot.com",
     messagingSenderId: "806199533912",
     appId: "1:806199533912:web:bb0c022c9be3b981e8c52d",
     measurementId: "G-T0N9553JNB"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
@@ -43,13 +45,13 @@ async function addEvent(e) {
         fetchEvents();
     } catch (error) {
         console.error("Error adding document: ", error);
-        alert("Error: " + error.message);
+        alert("Error: " + error.message);  // Display the error message
     }
 }
 
 async function fetchEvents() {
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
+    today.setHours(0, 0, 0, 0);  // Set the time to the start of the day
 
     const eventsRef = collection(db, "events");
     const q = query(eventsRef, where('date', '>=', Timestamp.fromDate(today)));
@@ -66,4 +68,5 @@ async function fetchEvents() {
     });
 }
 
+// Fetch events on load
 fetchEvents();
