@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 # Community Event Calendar
 
 ## Overview
@@ -137,3 +138,6 @@ Stop the server (CTRL+C) and start it again with http-server public.
 Ensure you have the latest changes from the repository:
 
 Run git pull origin main to fetch the latest updates.
+=======
+# community-event-calendar
+>>>>>>> Stashed changes
