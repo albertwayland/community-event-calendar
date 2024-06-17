@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream >>>>>>>
+<<<<<<< Updated upstream
 # Community Event Calendar
 
 ## Overview
