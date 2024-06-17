@@ -61,12 +61,16 @@ async function fetchEvents() {
     eventList.innerHTML = '';
     querySnapshot.forEach((doc) => {
         const data = doc.data();
-        const li = document.createElement('li');
-        li.className = 'list-group-item';
-        li.textContent = `${data.title} - ${data.date.toDate().toDateString()} at ${data.time}`;
-        eventList.appendChild(li);
+        const eventDate = data.date.toDate();
+        if (eventDate >= today) {
+            const li = document.createElement('li');
+            li.className = 'list-group-item';
+            li.textContent = `${data.title} - ${eventDate.toDateString()} at ${data.time}`;
+            eventList.appendChild(li);
+        }
     });
 }
 
 // Fetch events on load
 fetchEvents();
+
