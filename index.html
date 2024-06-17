@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Event Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Community Event Calendar</h1>
+        <form id="event-form">
+            <div>
+                <label for="event-title">Event Title</label>
+                <input type="text" id="event-title" required>
+            </div>
+            <div>
+                <label for="event-date">Date</label>
+                <input type="date" id="event-date" required>
+            </div>
+            <div>
+                <label for="event-time">Time</label>
+                <input type="time" id="event-time" required>
+            </div>
+            <div>
+                <label for="event-location">Location</label>
+                <input type="text" id="event-location" required>
+            </div>
+            <div>
+                <label for="event-description">Description</label>
+                <textarea id="event-description" required></textarea>
+            </div>
+            <button type="submit">Add Event</button>
+        </form>
+        <ul id="event-list" class="list-group"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

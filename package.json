@@ -1,0 +1,18 @@
+{
+    "name": "community-event-calendar",
+    "version": "1.0.0",
+    "description": "A community event calendar using Firebase",
+    "main": "index.html",
+    "scripts": {
+        "start": "http-server public",
+        "deploy": "gh-pages -d public"
+    },
+    "dependencies": {
+        "gh-pages": "^5.0.0"
+    },
+    "author": "Your Name",
+    "license": "ISC",
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}
