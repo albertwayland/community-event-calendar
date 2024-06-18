@@ -5,7 +5,7 @@ The Community Event Calendar is a web application that allows users to create, v
 
 # Community Event Calendar
 
-A simple event calendar application using Firebase for backend services and GitHub Pages for hosting.
+A company event calendar application using Firebase for backend services and GitHub Pages for hosting.
 
 ## Features
 
